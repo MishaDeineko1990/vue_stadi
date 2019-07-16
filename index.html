@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ 	<title>Привет, Vue</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<div id="app">
+
+  	<h1 v-show="!message">Напишите ваше сообщенния для помощиВ</h1>
+
+  	<h1 v-show="message">Тривога</h1>
+
+
+  	<textarea v-model="message"></textarea><br>
+  	<button type="submit" v-show='message'>Send message</button>
+
+  	<pre>{{ $data }}</pre> 
+
+</div>
+
+	
+
+
+
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<script src="src/script/script.js"></script>
+
+</body>
+</html>
