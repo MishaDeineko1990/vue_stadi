@@ -49,12 +49,29 @@
 
 
 
+
+
+
+
   <br>
   <br>
   <br>
   <br>
   <br>
   <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <h1>Таблица умножения на 4</h1>
     <ul class="list-group">
@@ -68,6 +85,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 <br>
@@ -76,6 +102,23 @@
 <br>
 <br>
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,6 +130,22 @@
     </ul>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 <br>
@@ -95,6 +154,19 @@
 <br>
 <br>
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -102,7 +174,7 @@
   <br>
   <div>
     <ul class="list-group">
-        <li v-for="(story, index) in stories2" :key="index" class="list-group-item">{{index+1}} {{story.writer}} сказал "{{ story.plot }}"</li>
+        <li v-for="(story, index) in stories2" :key="index" class="list-group-item">{{index+1}}. {{story.writer}} сказал "{{ story.plot }}"</li>
     </ul>
   </div>
 
@@ -117,6 +189,111 @@
 
 
 
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <h1>Давайте послушаем несколько историй 3!</h1>
+
+  <ul class="list-group">
+
+    <li v-for="(value, key, index) in story" :key="index" class="list-group-item">
+
+      {{index}} : {{key}} : {{value}}
+
+    </li>
+
+  </ul>
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <h1>Це Я</h1>
+
+  <ul class="list-group">
+
+    <li v-for="(value, key, index) in myParametrs" :key="index" class="list-group-item">
+
+      {{index}} : {{key}} = {{value}}
+
+    </li>
+
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 <br>
@@ -125,6 +302,18 @@
 <br>
 <br>
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,6 +322,19 @@
 
 </div>
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
