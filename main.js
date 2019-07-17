@@ -1,12 +1,14 @@
+new Vue({
 
-  new Vue({
-
-    el: '#app',
+    el: '.container',
 
     data: {
 
-      message: ''
+      gender: 'female',
 
-    }
+      name: 'Вселенная',
 
-  })
+    },
+
+  });
+

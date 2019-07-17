@@ -3,35 +3,51 @@
 <head>
 	<meta charset="UTF-8">
  	<title>Привет, Vue</title>
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
 
 
 
+<div class="container">
 
+  <!-- || — логический оператор ИЛИ -->
 
+	<div v-if="gender === 'male' || gender === 'female'">
 
+    	<h1>Привет,
 
-<div id="app">
+      	<!-- отрисовка span, если 'gender' равняется 'male' -->
 
-  	<h1 v-show="!message">Напишите ваше сообщенния для помощиВ</h1>
+      	<span v-show="gender === 'male'">Мистер {{name}}.</span>
 
-  	<h1 v-show="message">Тривога</h1>
+      	<!-- отрисовка span, если 'gender' равняется'female' -->
 
+     	<span v-if="gender === 'female'">Мисс {{name}}.</span>
 
-  	<textarea v-model="message"></textarea><br>
-  	<button type="submit" v-show='message'>Send message</button>
+    	</h1>
 
-  	<pre>{{ $data }}</pre> 
+  </div>
+
+  <!-- v-else сразу следует за блоком v-if для его работы -->
+
+  <h1 v-else>Так, значит, ты не можешь решить. Отлично!</h1>
+
+  <!-- показать поля ввода -->
+
+  <label for="gender">Введите свой пол:</label>
+
+  <input v-model="gender" class="form-control" id="gender">
+
+  <label for="name">Введите ваше имя:</label>
+
+  <input v-model="name" class="form-control" id="name">
+
+  <pre>{{ $data }}</pre>
 
 </div>
-
 	
 
-
-
-
-<!-- dfds -->
 
 
 

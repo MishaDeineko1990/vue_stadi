@@ -1,1 +1,1 @@
-new Vue({el:"#app",data:{message:""}});
+new Vue({el:".container",data:{gender:"female",name:"Вселенная"}});
