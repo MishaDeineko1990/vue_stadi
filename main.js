@@ -48,7 +48,9 @@ new Vue({
 
      favoriteFood: "Piizza"
 
-    }
+    },
+
+    upvotes: 0
 
 
     },
