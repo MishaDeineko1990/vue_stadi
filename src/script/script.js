@@ -1,1 +1,1 @@
-new Vue({el:".container",data:{gender:"female",name:"Вселенная"}});
+new Vue({el:".container",data:{gender:"female",name:"Вселенная",stories:["Сегодня я разбил машину!","Вчера кто-то украл мою сумку!","Кто-то съел мой шоколад..."]}});
