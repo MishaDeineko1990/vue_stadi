@@ -16,7 +16,7 @@
         {name: 'Мистер Коричневый', votes: 130},
 
       ]
-
+// 44444
     },
     computed: {
       mayor: function () {
