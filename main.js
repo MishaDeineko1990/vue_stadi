@@ -16,7 +16,12 @@
         {name: 'Мистер Коричневый', votes: 130},
 
       ]
+<<<<<<< HEAD
 // 44444
+=======
+// dsggsdg
+// 2222
+>>>>>>> vboru
     },
     computed: {
       mayor: function () {
