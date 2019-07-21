@@ -1,112 +1,41 @@
-new Vue({
+
+  var vm = new Vue({
 
     el: '.container',
 
     data: {
 
-      gender: 'female',
+      candidates: [
 
-      name: 'Вселенная',
+        {name: 'Мистер Черный', votes: 140},
 
-      stories: [
-		'Сегодня я разбил машину!',
-		'Вчера кто-то украл мою сумку!',
-		'Кто-то съел мой шоколад...',
-		],
-	stories2: [
-		{
-			plot: 'Сегодня я разбил машину!',
-			writer: 'Алекс'},
-		{
-			plot: 'Вчера кто-то украл мою сумку!',
-			writer: 'Джон'},
-		{
-			plot: 'Кто-то съел мой шоколад...',
-			writer: 'Джон'},
-		{
-			plot: 'Я съел чей-то шоколад!',
-			writer: 'Алекс'},
-		],
-	story: {
+        {name: 'Мистер Белый', votes: 135},
 
-      plot: 'Кто-то съел мой шоколад...',
+        {name: 'Мистер Розовый', votes: 145},
 
-      writer: 'Джон',
+        {name: 'Мистер Коричневый', votes: 130},
 
-      upvotes: 47
+      ]
 
     },
-   myParametrs: {
-
-     name: 'Misha',
-
-     Height: '179',
-
-     weigh: "65 kg.",
-
-     eyeColor: "grey",
-
-     favoriteFood: "Piizza"
-
-    },
-
-    upvotes: 0,
-
-    a: 1,
-
-    b: 2,
-
-    c: null,
-
-    operator: '+',
-
-  },
-
-  methods: {
-
-    calculate: function (event) {
-
-      event.preventDefault();
-
-      switch (this.operator) {
-
-        case '+':
-
-          this.c = this.a + this.b
-
-          break;
-
-        case '-':
-
-          this.c = this.a - this.b
-
-          break;
-
-        case '*':
-
-          this.c = this.a * this.b
-
-          break;
-
-        case '/':
-
-          this.c = this.a / this.b
-
-          break;
-
+    computed: {
+      mayor: function () {
+        // сначала мы сортируем массив по убыванию
+        var candidatesSorted = this.candidates.sort(function (a, b) {
+          return b.votes - a.votes;
+        });
+        // мэр будет первым пунктом
+        return candidatesSorted[0];
       }
-
+    },
+    methods: {
+     // этот метод запускается при нажатии клавиши 'delete'
+      clear: function () {
+        // Установить голоса всех кандидатов в 0 с помощью функции map().
+        this.candidates = this.candidates.map(function (candidate) {
+          candidate.votes = 0;
+          return candidate;
+        })
+      }
     }
-
-  },
-
- });
-
-
-
-
-
-
-
-
-
+  })
